@@ -66,7 +66,7 @@ class ProductCard extends StatelessWidget {
         press: () {
           Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const SecondPage()),
+                MaterialPageRoute(builder: (context) => SecondPage.builder(product: products[index])),
           );
         },
         product: products[index],

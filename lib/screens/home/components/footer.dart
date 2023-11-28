@@ -28,15 +28,9 @@ class Footer extends StatelessWidget {
                   flex: 2,
                   child: Column(
                     children: [
-                      Text(
-                        "Mauá E-Sports",
-                        style: TextStyle(
-                            fontSize: 25.0,
-                            fontWeight: FontWeight.w900,
-                            color: kSecondaryColor),
-                      ),
+                      Image.asset('assets/images/logobranco.png'),
                       SizedBox(
-                        height: 20,
+                        height: 10,
                       ),
                     
                     ],

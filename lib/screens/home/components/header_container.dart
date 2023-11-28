@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:maua/model.dart/responsive.dart';
 
 import '../../../constants.dart';
-import 'banner_section.dart';
 import 'header.dart';
 
 class HeaderContainer extends StatelessWidget {

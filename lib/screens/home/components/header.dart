@@ -27,8 +27,8 @@ class Header extends StatelessWidget {
                   icon: Icon(Icons.menu))),
         Container(
           child: Padding(
-            padding: EdgeInsets.only(right: MediaQuery.of(context).size.width * 0.65,
-            left: MediaQuery.of(context).size.width * 0.05),
+            padding: EdgeInsets.only(right: MediaQuery.of(context).size.width * 0.35,
+            left: MediaQuery.of(context).size.width * 0.0),
             child: const Image(
               width: 80,    
               image: AssetImage('assets/images/logo.png'),

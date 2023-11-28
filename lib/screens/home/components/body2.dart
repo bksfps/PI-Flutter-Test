@@ -6,9 +6,11 @@ import '../../../constants.dart';
 import 'SecondPage.dart';
 
 class BodyContainer2 extends StatefulWidget {
-  const BodyContainer2({
-    Key? key,
-  }) : super(key: key);
+  Product? product;
+  BodyContainer2 ({Key? key}) : super(key: key);
+  BodyContainer2.builder ({Key? key, required Product this.product}) : super(key: key);
+
+
 
   @override
   _BodyContainer2State createState() => _BodyContainer2State();
@@ -45,18 +47,10 @@ class _BodyContainer2State extends State<BodyContainer2> {
   Widget build(BuildContext context) {
     return Column( // Adicionado um novo Column
       children: [
+        SizedBox(height: 20,),
         Text(
-          'JOGO',
-          style: TextStyle(
-            fontSize: 24, // Tamanho do texto
-            fontWeight: FontWeight.bold, // Negrito
-          ),
-        ),
-        Text(
-          'Formulário para participar do time de ...',
-          style: TextStyle(
-            fontSize: 18, // Tamanho do texto
-          ),
+          'Formulario para entrar no time!',
+          style: TextStyle(fontSize: 30,),
         ),
         SizedBox(height: 20), // Espaçamento entre o subtítulo e o formulário
         Container(
@@ -138,15 +132,9 @@ class _BodyContainer2State extends State<BodyContainer2> {
                 ),
                 SizedBox(height: 10,),
                 TextFormField(
-                  controller: _personagemController,
-                  decoration: InputDecoration(labelText: 'Personagens de conforto (se houver)'),
-                  style: TextStyle(fontSize: 20),
-                  validator: (value) {
-                    if (value == null || value.isEmpty) {
-                      return 'Por favor, insira o campo.';
-                    }
-                    return null;
-                  },
+                controller: _personagemController,
+                decoration: InputDecoration(labelText: 'Personagens de conforto (se houver)'),
+                style: TextStyle(fontSize: 20),
                 ),
                 SizedBox(height: 10,),
                 TextFormField(
