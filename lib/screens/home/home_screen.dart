@@ -37,7 +37,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   style: TextStyle(
                       fontSize: 25.0,
                       fontWeight: FontWeight.w900,
-                      color: kSecondaryColor),
+                      color: Colors.black),
                 ),
               ),
             ),

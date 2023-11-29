@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-
 import 'package:url_launcher/url_launcher.dart';
-
-import '../../../constants.dart';
+import 'package:maua/constants.dart';
 
 class HeaderWebMenu extends StatelessWidget {
   const HeaderWebMenu({
@@ -16,14 +14,26 @@ class HeaderWebMenu extends StatelessWidget {
         Center(
           child: InkWell(
             onTap: () {
-              launch('https://linktr.ee/mauaesports');
+              launch('https://maua.br/graduacao/atividades-estudantis/maua-sports');
             },
             child: HeaderMenu(
-              title: "Sobre Nós", press: () {
-                launch('https://linktr.ee/mauaesports');
+              title: "Sobre Nós",
+              press: () {
+                launch('https://maua.br/graduacao/atividades-estudantis/maua-sports');
               },
             ),
           ),
+        ),
+        SizedBox(width: 40), // Espaçamento entre "Sobre Nós" e o botão
+        ElevatedButton(
+          onPressed: () {
+            // Lógica para sair
+            // Adicione a lógica de sair aqui
+          },
+          style: ElevatedButton.styleFrom(
+            primary: Color.fromARGB(255, 8, 29, 61),
+          ),
+          child: Text("Sair"),
         ),
       ],
     );
@@ -45,7 +55,7 @@ class MobFooterMenu extends StatelessWidget {
         Center(
           child: HeaderMenu(
             press: () {
-              launch('https://linktr.ee/mauaesports');
+              launch('https://maua.br/graduacao/atividades-estudantis/maua-sports');
             },
             title: "Sobre nós",
           ),
@@ -64,8 +74,10 @@ class HeaderMenu extends StatelessWidget {
     required this.title,
     required this.press,
   }) : super(key: key);
+  
   final String title;
   final VoidCallback press;
+
   @override
   Widget build(BuildContext context) {
     return InkWell(
@@ -73,7 +85,11 @@ class HeaderMenu extends StatelessWidget {
       child: Container(
         child: Text(
           title,
-          style: TextStyle(fontWeight: FontWeight.w600, fontSize: 16),
+          style: TextStyle(
+            color: title == "Sociais" || title == "Sobre" ? Colors.black : Colors.white, // Condição para definir a cor do texto
+            fontWeight: FontWeight.w600,
+            fontSize: 16,
+          ),
         ),
       ),
     );
@@ -96,17 +112,19 @@ class _MobMenuState extends State<MobMenu> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           HeaderMenu(
-            press: () {},
-            title: "Menu",
+            press: () {
+              launch('https://linktr.ee/mauaesports');
+            },
+            title: "Sociais",
           ),
           SizedBox(
             height: kPadding,
           ),
           HeaderMenu(
             press: () {
-              launch('https://linktr.ee/mauaesports');
+              launch('https://maua.br/graduacao/atividades-estudantis/maua-sports');
             },
-            title: "Sobre nós",
+            title: "Sobre",
           ),
           SizedBox(
             height: kPadding,

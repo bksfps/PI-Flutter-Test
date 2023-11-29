@@ -25,7 +25,7 @@ class Footer extends StatelessWidget {
             Row(
               children: [
                 Expanded(
-                  flex: 2,
+                  flex: 4,
                   child: Column(
                     children: [
                       Image.asset('assets/images/logobranco.png'),
@@ -47,29 +47,6 @@ class Footer extends StatelessWidget {
           ],
         ),
       ),
-    );
-  }
-}
-
-class SocialIcon extends StatelessWidget {
-  const SocialIcon({
-    Key? key,
-    required this.icon,
-  }) : super(key: key);
-  final String icon;
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: 35,
-      width: 35,
-      padding: EdgeInsets.all(8.0),
-      decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(8.0),
-          border: Border.all(
-            color: Colors.grey.withOpacity(0.5),
-          )),
-      child: SvgPicture.asset(icon),
     );
   }
 }

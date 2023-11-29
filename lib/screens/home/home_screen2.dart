@@ -15,7 +15,9 @@ import 'components/header_container.dart';
 import 'components/menu.dart';
 
 class HomeScreen2 extends StatefulWidget {
-  const HomeScreen2({Key? key}) : super(key: key);
+  Product? product;
+  HomeScreen2 ({Key? key}) : super(key: key);
+  HomeScreen2.builder({Key? key, required Product this.product}) : super(key: key);
 
   @override
   _HomeScreenState createState() => _HomeScreenState();
@@ -36,7 +38,7 @@ class _HomeScreenState extends State<HomeScreen2> {
                   style: TextStyle(
                       fontSize: 25.0,
                       fontWeight: FontWeight.w900,
-                      color: kSecondaryColor),
+                      color: Colors.black),
                 ),
               ),
             ),
